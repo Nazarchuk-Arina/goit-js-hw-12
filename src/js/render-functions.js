@@ -47,5 +47,5 @@ export function renderImages(images) {
  </li>`
     )
     .join('');
-  gallery.innerHTML = markup;
+  gallery.insertAdjacentHTML('beforeend', markup);
 }
