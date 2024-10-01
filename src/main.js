@@ -14,12 +14,12 @@ let lightbox = new SimpleLightbox('.gallery a');
 
 let page = 1;
 let searchQuery = '';
+loadMoreButton.classList.add('hidden');
 
 searchForm.addEventListener('submit', handleSubmit);
 
 async function handleSubmit(event) {
   event.preventDefault();
-
   searchQuery = event.currentTarget.elements.query.value.trim();
   page = 1;
 
@@ -31,7 +31,6 @@ async function handleSubmit(event) {
   }
 
   gallery.innerHTML = '';
-  loadMoreButton.classList.add('hidden');
 
   loader.classList.add('isVisible');
   await loadImages();
@@ -53,7 +52,7 @@ async function loadImages() {
     }
   } catch (error) {
     iziToast.error({
-      message: 'Failed loadig images.',
+      message: 'Failed loading images.',
     });
   }
 }

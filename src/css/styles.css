@@ -170,11 +170,11 @@ button:hover {
   }
 }
 
-.hidden {
-  display: none;
-}
-
 .load-more {
+  display: block;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  margin: 0 auto;
   border: none;
   border-radius: 8px;
   padding: 8px 16px;
@@ -184,5 +184,8 @@ button:hover {
   color: #fff;
   margin-top: 32px;
   margin-bottom: 32px;
-  margin-left: 70px;
+}
+
+.hidden {
+  display: none;
 }
